@@ -1,0 +1,230 @@
+/* Обнуление базовых стилей */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #ffffff;
+    line-height: 1.6;
+}
+
+.container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Шапка */
+.header {
+    background-color: #5c83ff;
+    color: white;
+    padding: 15px 0;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+}
+
+.logo img {
+    height: 30px;
+}
+
+/* Секции (Чередование контента) */
+.section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 0;
+    gap: 40px;
+}
+
+.hero-section {
+    flex-direction: row;
+}
+
+.features-section {
+    flex-direction: row-reverse; /* Картинка справа, текст слева */
+}
+
+.image-block {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.mockup-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.text-block {
+    flex: 1;
+}
+
+.text-right {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+h1, h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    font-weight: 800;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+    color: #555;
+    text-transform: uppercase;
+}
+
+/* Кнопка "Скачать" в стиле каменной трубы */
+.download-btn {
+    display: inline-block;
+    background: #4e4e4e;
+    color: #fff;
+    padding: 15px 40px;
+    text-decoration: none;
+    text-transform: lowercase;
+    font-weight: bold;
+    border: 4px solid #2d2d2d;
+    border-radius: 4px;
+    box-shadow: inset 0 4px 0 rgba(255,255,255,0.2);
+    transition: transform 0.1s;
+}
+
+.download-btn:hover {
+    transform: scale(1.05);
+}
+
+/* Список фич */
+.sub-heading {
+    color: #888;
+    margin-bottom: 20px;
+}
+
+.features-list {
+    list-style: none;
+}
+
+.features-list li {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.95rem;
+}
+
+/* Секция: Целевая аудитория (с шахматным фоном) */
+.audience-section {
+    background-color: #f0f0f0;
+    /* Создаем легкий шахматный узор как на макете */
+    background-image: linear-gradient(45deg, #e8e8e8 25%, transparent 25%), 
+                      linear-gradient(-45deg, #e8e8e8 25%, transparent 25%), 
+                      linear-gradient(45deg, transparent 75%, #e8e8e8 75%), 
+                      linear-gradient(-45deg, transparent 75%, #e8e8e8 75%);
+    background-size: 40px 40px;
+    background-position: 0 0, 0 20px, 20px -20px, -20px 0px;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.audience-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.audience-section p {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+/* Синяя секция отзывов и CTA */
+.cta-reviews-section {
+    background-color: #5c83ff;
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.cta-reviews-section h2 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+.platform-info {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    opacity: 0.9;
+}
+
+.reviews-title-block {
+    margin-bottom: 30px;
+}
+
+.emoji-pointer {
+    font-size: 2rem;
+    margin-top: 10px;
+}
+
+/* Сетка карточек для отзывов (3 в ряд, 2 строки) */
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.review-card {
+    background-color: #f4f7ff; /* Светлый тон для карточек */
+    height: 150px;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Подвал */
+.footer {
+    background-color: #5c83ff;
+    height: 60px;
+    border-top: 1px solid rgba(255,255,255,0.2);
+}
+
+/* Адаптивность для мобильных устройств */
+max-width: 768px {
+    .section {
+        flex-direction: column !important;
+        text-align: center;
+    }
+    .text-right {
+        text-align: center;
+        align
+
+
+items: center;
+    }
+    .reviews-grid {
+        grid-template-columns: 1fr; /* На мобилках отзывы встанут в один столбец */
+    }
+}-
